@@ -67,7 +67,7 @@ static void gip_client_state_changed(struct work_struct *work)
 	}
 }
 
-static int gip_client_uevent(struct device *dev, struct kobj_uevent_env *env)
+static int gip_client_uevent(const struct device *dev, struct kobj_uevent_env *env)
 {
 	struct gip_client *client = to_gip_client(dev);
 	struct gip_classes *classes = client->classes;
